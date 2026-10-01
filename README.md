@@ -14,7 +14,7 @@ A webcam-based bug-swatting booth game. Bugs appear on a live camera feed — sw
 
 1. **Create a virtual environment** (from the project root):
    ```
-   python -m venv .venv
+   py -m venv .venv
    ```
 
 2. **Activate it**:
@@ -26,13 +26,14 @@ A webcam-based bug-swatting booth game. Bugs appear on a live camera feed — sw
    ```
    pip install -r BugHunt\requirements.txt
    ```
+   > If `pip` isn't recognized, use: `.venv\Scripts\pip.exe install -r BugHunt\requirements.txt`
    This installs: `mediapipe`, `opencv-python`, `numpy`, and `sounddevice`.
 
 ## Run the Game
 
 ```
 cd BugHunt
-python bughunt.py
+py bughunt.py
 ```
 
 Or without activating the venv:
@@ -41,9 +42,11 @@ cd BugHunt
 ..\.venv\Scripts\python.exe bughunt.py
 ```
 
+> **Tip:** On Windows, use `py` if `python` is not recognized.
+
 The game launches in **fullscreen** by default. To run in a window:
 ```
-python bughunt.py --windowed
+py bughunt.py --windowed
 ```
 
 ### Command-Line Options
